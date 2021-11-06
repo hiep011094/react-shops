@@ -1,0 +1,28 @@
+.c-btn01 {
+    min-width: 300px;
+    background: #6b2800;
+    color: #fff;
+    display: inline-block;
+    font-size: 2.4rem;
+    font-family: "Dancing Script", cursive;
+    text-align: center;
+    padding: 7px 20px 4px 20px;
+    border-radius: 10px;
+    position: relative;
+    transition: 0.5s;
+    &::after {
+        content: ">";
+        font-family: "Lato", sans-serif;
+        position: absolute;
+        right: 20px;
+        top: calc(50% - 2px);
+        transform: translateY(-50%);
+        transition: 0.5s;
+    }
+    &:hover {
+        opacity: 0.8;
+        &::after {
+            right: 15px;
+        }
+    }
+}
