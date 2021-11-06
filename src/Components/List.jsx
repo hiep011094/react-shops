@@ -1,24 +1,24 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 const List = (props) => {
   const col = props.col ? `c-list--${props.col}` : "";
+  let children = [];
+  // console.log;
+  if (props.children.length === undefined) {
+    children = [props.children];
+  } else {
+    children = props.children;
+  }
+
   return (
     <div className={`c-list ${col}`}>
-      {props.children.map((item, index) => (
+      {children.map((item, index) => (
         <div key={index} className="c-list__item">
           {item.props.children}
         </div>
       ))}
     </div>
   );
-};
-
-List.propTypes = {
-  col: PropTypes.number,
-};
-List.defaultProps = {
-  col: null,
 };
 
 export default List;

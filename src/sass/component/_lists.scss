@@ -1,6 +1,7 @@
 // list
 .c-list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     width: calc(100% + 20px);
     margin-left: -10px;
@@ -33,6 +34,14 @@
     &--4 {
         .c-list__item {
             width: calc(25% - 20px);
+            @include sp(999px) {
+                width: calc(50% - 20px);
+                margin-bottom: 20px;
+            }
+            @include sp(630px) {
+                width: 100%;
+                margin-bottom: 20px;
+            }
         }
     }
     &--5 {

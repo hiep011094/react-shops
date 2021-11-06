@@ -19,3 +19,15 @@ body {
     margin: 0 auto;
     padding: 0 20px;
 }
+
+.l-section {
+    padding: 50px 0;
+    @include sp(768px) {
+        padding: 25px 0;
+    }
+    &__title {
+        text-align: center;
+    }
+    &__main {
+    }
+}

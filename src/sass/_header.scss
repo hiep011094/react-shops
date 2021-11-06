@@ -1,6 +1,6 @@
 // header
 .c-header {
-    background: rgba(108, 40, 1, 0.8);
+    background: rgba(206, 105, 47, 0.5);
     position: fixed;
     width: 100%;
     left: 0;
@@ -23,7 +23,7 @@
 }
 
 .c-header.active {
-    background: rgba(108, 40, 1, 0.8);
+    background: rgba(206, 105, 47, 0.8);
     padding: 4px 0 3px 0;
     @include sp(768px) {
         padding: 10px 0;
