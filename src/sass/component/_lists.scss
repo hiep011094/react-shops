@@ -5,6 +5,9 @@
     justify-content: space-between;
     width: calc(100% + 20px);
     margin-left: -10px;
+    @include sp(999px) {
+        justify-content: center;
+    }
     @include sp(768px) {
         margin-left: 0;
         width: 100%;
@@ -21,6 +24,10 @@
     &--2 {
         .c-list__item {
             width: calc(50% - 20px);
+            @include sp(999px) {
+                width: 100%;
+                max-width: 700px;
+            }
         }
     }
     &--3 {

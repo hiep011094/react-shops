@@ -297,3 +297,71 @@
         }
     }
 }
+
+.c-blog {
+    cursor: pointer;
+    margin-bottom: 25px;
+    @include sp(768px) {
+        margin-bottom: 10px;
+    }
+    &__txt {
+        margin: 0 auto;
+        padding: 60px 30px 30px 30px;
+        width: 95%;
+        background: rgba(255, 255, 255, 0.8);
+        transform: translateY(-35px);
+        box-shadow: 0px 1px 20px #33333333;
+        position: relative;
+        transition: 0.5s;
+        min-height: 242px;
+        @include sp(768px) {
+            padding: 60px 20px 30px 20px;
+            min-height: auto;
+        }
+        .cate {
+            background: #dd9f05;
+            color: #fff;
+            padding: 5px 15px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            text-shadow: 0 0 1px #fff;
+            letter-spacing: 0.1em;
+            display: inline-block;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            @include sp(768px) {
+                padding: 4px 12px;
+                font-size: 1.1rem;
+            }
+        }
+        .ttl {
+            text-align: center;
+            font-size: 2.6rem;
+            font-family: "Pacifico", cursive;
+            color: #6b2800;
+            line-height: 1.4;
+            @include sp(768px) {
+                font-size: 2rem;
+            }
+        }
+        .description {
+            text-align: justify;
+        }
+    }
+    &__img {
+        overflow: hidden;
+        img {
+            width: 100%;
+            transition: 0.5s;
+        }
+    }
+    &:hover {
+        .c-blog__txt {
+            transform: translateY(-45px);
+        }
+        img {
+            transform: scale(1.1);
+        }
+    }
+}
